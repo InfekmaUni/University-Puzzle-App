@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frags"
+    android:orientation="vertical"
+    android:layout_alignParentTop="false"
+    android:layout_alignParentStart="false"
+    android:gravity="center_vertical|fill_vertical"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:layout_margin="10dp">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="267dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/local_puzzles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_local"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"
+                android:textAllCaps="true" />
+
+            <ListView
+                android:layout_height="180dp"
+                android:id="@+id/installed_puzzles"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:headerDividersEnabled="false"
+                style="@style/Widget.AppCompat.Light.ListView.DropDown"
+                android:scrollbarFadeDuration="0" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="20dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/server_puzzles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_download"
+                android:textStyle="normal|bold"
+                android:textAllCaps="true"
+                android:textAlignment="center" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/download_puzzles"
+                android:layout_weight="1"
+                android:scrollbarFadeDuration="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_download_back"
+            android:layout_weight="1"
+            android:text="@string/button_back" />
+
+    </LinearLayout>
+
+</LinearLayout>
